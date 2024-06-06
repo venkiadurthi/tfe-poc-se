@@ -21,11 +21,10 @@ resource "azurerm_resource_group" "rg" {
     owner    = "dopt",
     activity = "test-TFE",
   }
-
 }
 
-module "storage-account" {
-  source  = "app.terraform.io/DXE-POC/storage-account/azurerm"
-  version = "0.3.0"
-  resource_group_name = "rg-tfe-poc"
-}
+# module "storage-account" {
+#   source  = "app.terraform.io/DXE-POC/storage-account/azurerm"
+#   version = "0.3.0"
+#   resource_group_name = "rg-tfe-poc"
+# }
