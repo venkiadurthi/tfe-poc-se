@@ -29,16 +29,12 @@ provider "azurerm" {
 #   resource_group_name = "rg-tfe-poc"
 # }
 
-resource "azurerm_container_" "name" {
-
-}
-
 data "azurerm_resource_group" "rg" {
   name = "rg-tfe-poc"
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "tfe-test-storage"
+  name                     = "tfeteststorage"
   resource_group_name      = data.azurerm_resource_group.rg.name
   location                 = data.azurerm_resource_group.rg.location
   account_tier             = "Standard"
@@ -91,7 +87,7 @@ resource "azurerm_linux_virtual_machine" "example" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = file("id_rsa.pub")
   }
 
   os_disk {
