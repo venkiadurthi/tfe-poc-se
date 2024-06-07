@@ -30,7 +30,7 @@ provider "azurerm" {
 # }
 module "vm-module" {
   source       = "app.terraform.io/DXE-POC/vm-module/azurerm"
-  version      = "0.0.1"
+  version      = "0.0.2"
   rg_name      = data.azurerm_resource_group.rg.name
   rg_loc       = data.azurerm_resource_group.rg.location
   storage_name = "tfeteststorage"
