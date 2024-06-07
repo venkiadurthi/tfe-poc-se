@@ -29,12 +29,12 @@ provider "azurerm" {
 #   resource_group_name = "rg-tfe-poc"
 # }
 module "vm-module" {
-  source  = "app.terraform.io/DXE-POC/vm-module/azurerm"
-  version = "0.0.1"
-  rg_name = data.azurerm_resource_group.name
-  rg_loc= data.azurerm_resource_group.rg.location
+  source       = "app.terraform.io/DXE-POC/vm-module/azurerm"
+  version      = "0.0.1"
+  rg_name      = data.azurerm_resource_group.rg.name
+  rg_loc       = data.azurerm_resource_group.rg.rg.location
   storage_name = "tfeteststorage"
-  vm_name = "tfe-poc-network"
+  vm_name      = "tfe-poc-network"
 }
 
 data "azurerm_resource_group" "rg" {
