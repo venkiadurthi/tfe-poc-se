@@ -33,7 +33,7 @@ module "vm-module" {
   version      = "0.0.3"
   rg_name      = data.azurerm_resource_group.rg.name
   rg_loc       = data.azurerm_resource_group.rg.location
-  storage_name = "tfeteststorage"
+  storage_name = "tfeteststorage1"
   vm_name      = "tfe-poc-network"
 }
 
